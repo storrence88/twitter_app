@@ -11,7 +11,9 @@ User.create!(
   email: "storrence88@gmail.com",
   password: "password",
   password_confirmation: "password",
-  admin: true
+  admin: true,
+  activated: true,
+  activated_at: Time.zone.now
 )
 
 puts 'Admin user created!'
@@ -24,7 +26,9 @@ puts 'Admin user created!'
     name:  name,
     email: email,
     password: password,
-    password_confirmation: password
+    password_confirmation: password,
+    activated: true,
+    activated_at: Time.zone.now
   )
   puts "User #{n} created!"
 end
