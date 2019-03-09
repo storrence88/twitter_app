@@ -203,3 +203,8 @@ input {
     border-bottom: 1px solid $gray-lighter;
   }
 }
+
+.forgot-password {
+  display: inline-flex;
+  justify-content: flex-end;
+}
