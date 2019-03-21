@@ -9,7 +9,7 @@ class User < ApplicationRecord
 
   has_secure_password
   has_many :microposts, dependent: :destroy
-  has_many :active_relationships, classname: 'Relationship', foreign_key: 'follower_id', dependent: :destroy
+  has_many :active_relationships, class_name: 'Relationship', foreign_key: 'follower_id', dependent: :destroy
 
   validates :name,  presence: true, length: { maximum: 50 }
   validates :email, presence: true, length: { maximum: 255 }, format: { with: VALID_EMAIL_REGEX }, uniqueness: { case_sensitive: false }
